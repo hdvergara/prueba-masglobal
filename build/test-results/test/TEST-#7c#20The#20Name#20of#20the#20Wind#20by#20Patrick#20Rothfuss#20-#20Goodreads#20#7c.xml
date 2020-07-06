@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="| The Name of the Wind by Patrick Rothfuss - Goodreads |" tests="17" skipped="0" failures="0" errors="0" timestamp="2020-07-06T20:45:34" hostname="LAPTOP-AS5HFOC4" time="39.749">
+  <properties/>
+  <testcase name="Given I m on the homepage" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="When I type 'The name of the wind' into the search field" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="And I click the Google Search button" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="Then I go to the search results page" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="And the first result is 'The Name of the Wind by Patrick Rothfuss - Goodreads'" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="When I click on the first result link" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="Then I go to the 'Patrick Rothfuss - The Books' page" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.001"/>
+  <testcase name="classMethod" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="16.803"/>
+  <testcase name="Given I m on the homepage" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="When I type 'The name of the w' into the search field" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="And the suggestions list is displayed" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="And I click on the first suggestion in the list" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="Then I go to the search results page" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="And the first result is 'The Name of the Wind by Patrick Rothfuss - Goodreads'" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="When I click on the first result link" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="Then I go to the 'Patrick Rothfuss - The Books' page" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="0.0"/>
+  <testcase name="classMethod" classname="| The Name of the Wind by Patrick Rothfuss - Goodreads |" time="16.001"/>
+  <system-out><![CDATA[2020-jul-06 15:45:28 [Test] INFO  : ============================ Start Test ==============================
+
+  Scenario Outline: User can search with 'Google Search'              ?[90m# src/main/resources/features/ScenarioUserStorie.feature:14?[0m
+    ?[32mGiven ?[0m?[32mI m on the homepage?[0m                                         ?[90m# StepTestGoogle.ImOnTheHomepage()?[0m
+    ?[32mWhen ?[0m?[32mI type 'The name of the wind' into the search field?[0m          ?[90m# StepTestGoogle.iTypeTheNameOfTheWindIntoTheSearchField()?[0m
+    ?[32mAnd ?[0m?[32mI click the Google Search button?[0m                              ?[90m# StepTestGoogle.iClickTheGoogleSearchButton()?[0m
+    ?[32mThen ?[0m?[32mI go to the search results page?[0m                              ?[90m# StepTestGoogle.iGoToTheSearchResultsPage()?[0m
+    ?[31mAnd ?[0m?[31mthe first result is ?[0m?[31m?[1m'The Name of the Wind - Patrick Rothfuss'?[0m ?[90m# StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(String)?[0m
+      ?[31morg.junit.ComparisonFailure: the result was 'The Name of the Wind by Patrick Rothfuss - Goodreads' but the expected is 'The Name of the Wind - Patrick Rothfuss'. expected:<...he Name of the Wind [- Patrick Rothfus]s> but was:<...he Name of the Wind [by Patrick Rothfuss - Goodread]s>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at co.com.pruebatecnica.controllers.google.MainController.checkSpecificSearchResult(MainController.java:103)
+      	at co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(StepTestGoogle.java:52)
+      	at ?.And the first result is 'The Name of the Wind - Patrick Rothfuss'(src/main/resources/features/ScenarioUserStorie.feature:8)
+      ?[0m
+    ?[36mWhen ?[0m?[36mI click on the first result link?[0m                             ?[90m# StepTestGoogle.iClickOnTheFirstResultLink()?[0m
+    ?[36mThen ?[0m?[36mI go to the 'Patrick Rothfuss - The Books' page?[0m              ?[90m# StepTestGoogle.iGoToThePatrickRothfussTheBooksPage()?[0m
+2020-jul-06 15:45:34 [Test] INFO  : ----------Operation: Go to google home page----------
+2020-jul-06 15:45:34 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 15:45:58 [Test] INFO  : ============================ Start Test ==============================
+
+  Scenario Outline: User can search by using the suggestions          ?[90m# src/main/resources/features/ScenarioUserStorie.feature:29?[0m
+    ?[32mGiven ?[0m?[32mI m on the homepage?[0m                                         ?[90m# StepTestGoogle.ImOnTheHomepage()?[0m
+    ?[32mWhen ?[0m?[32mI type 'The name of the w' into the search field?[0m             ?[90m# StepTestGoogle.iTypeTheNameOfTheWIntoTheSearchField()?[0m
+    ?[32mAnd ?[0m?[32mthe suggestions list is displayed?[0m                             ?[90m# StepTestGoogle.theSuggestionsListIsDisplayed()?[0m
+    ?[32mAnd ?[0m?[32mI click on the first suggestion in the list?[0m                   ?[90m# StepTestGoogle.iClickOnTheFirstSuggestionInTheList()?[0m
+    ?[32mThen ?[0m?[32mI go to the search results page?[0m                              ?[90m# StepTestGoogle.iGoToTheSearchResultsPage()?[0m
+    ?[31mAnd ?[0m?[31mthe first result is ?[0m?[31m?[1m'The Name of the Wind - Patrick Rothfuss'?[0m ?[90m# StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(String)?[0m
+      ?[31morg.junit.ComparisonFailure: the result was 'The Name of the Wind by Patrick Rothfuss - Goodreads' but the expected is 'The Name of the Wind - Patrick Rothfuss'. expected:<...he Name of the Wind [- Patrick Rothfus]s> but was:<...he Name of the Wind [by Patrick Rothfuss - Goodread]s>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at co.com.pruebatecnica.controllers.google.MainController.checkSpecificSearchResult(MainController.java:103)
+      	at co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(StepTestGoogle.java:52)
+      	at ?.And the first result is 'The Name of the Wind - Patrick Rothfuss'(src/main/resources/features/ScenarioUserStorie.feature:23)
+      ?[0m
+    ?[36mWhen ?[0m?[36mI click on the first result link?[0m                             ?[90m# StepTestGoogle.iClickOnTheFirstResultLink()?[0m
+    ?[36mThen ?[0m?[36mI go to the 'Patrick Rothfuss - The Books' page?[0m              ?[90m# StepTestGoogle.iGoToThePatrickRothfussTheBooksPage()?[0m
+2020-jul-06 15:46:04 [Test] INFO  : ----------Operation: Go to google home page----------
+2020-jul-06 15:46:04 [Test] INFO  : ----------Operation successfully completed----------
+
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 42530
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1594068331.535][WARNING]: Timed out connecting to Chrome, retrying...
+jul 06, 2020 3:45:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: OSS
+Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 3907
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1594068361.538][WARNING]: Timed out connecting to Chrome, retrying...
+jul 06, 2020 3:46:03 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: OSS
+]]></system-err>
+</testsuite>
