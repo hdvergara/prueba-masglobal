@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class runner.RunnerAditionalTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class runner.RunnerAditionalTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/runner.html">runner</a> &gt; RunnerAditionalTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">0</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">-</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">-</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Feature: Google Homepage Search
+2020-jul-06 16:07:13 [Test] INFO  : ----------Operation: Type in the google search field----------
+2020-jul-06 16:07:14 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:14 [Test] INFO  : ----------Operation: Click on the google search button----------
+2020-jul-06 16:07:15 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:15 [Test] INFO  : ----------Operation: Check the google results page----------
+2020-jul-06 16:07:15 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:32 [Test] INFO  : ----------Operation: Check the first google result----------
+2020-jul-06 16:07:32 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:37 [Test] INFO  : ============================= End Test ================================
+
+
+2020-jul-06 16:07:43 [Test] INFO  : ----------Operation: Type in the google search field----------
+2020-jul-06 16:07:43 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:43 [Test] INFO  : ----------Operation: Check that the suggestion list is displayed----------
+2020-jul-06 16:07:43 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:43 [Test] INFO  : ----------Operation: Click on specific element of the suggestion list----------
+2020-jul-06 16:07:45 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:45 [Test] INFO  : ----------Operation: Check the google results page----------
+2020-jul-06 16:07:45 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:07:55 [Test] INFO  : ----------Operation: Check the first google result----------
+2020-jul-06 16:07:55 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-06 16:08:00 [Test] INFO  : ============================= End Test ================================
+
+
+
+  Scenario: User can do a search from Google homepage using the suggestions        ?[90m# src/main/resources/features/GoogleSearch.feature:10?[0m
+    ?[32mGiven ?[0m?[32mI m on the homepage?[0m                                                      ?[90m# StepTestGoogle.ImOnTheHomepage()?[0m
+    ?[32mWhen ?[0m?[32mI type 'The name of the w' into the search field?[0m                          ?[90m# StepTestGoogle.iTypeTheNameOfTheWIntoTheSearchField()?[0m
+    ?[32mAnd ?[0m?[32mthe suggestions list is displayed?[0m                                          ?[90m# StepTestGoogle.theSuggestionsListIsDisplayed()?[0m
+    ?[32mAnd ?[0m?[32mI click on the first suggestion in the list?[0m                                ?[90m# StepTestGoogle.iClickOnTheFirstSuggestionInTheList()?[0m
+    ?[32mThen ?[0m?[32mI go to the search results page?[0m                                           ?[90m# StepTestGoogle.iGoToTheSearchResultsPage()?[0m
+    ?[32mAnd ?[0m?[32mthe third result is ?[0m?[32m?[1m'The Name of the Wind by Patrick Rothfuss - Goodreads'?[0m ?[90m# StepTestGoogle.theThirdResultIsTheNameOfTheWindByPatrickRothfussGoodreads(String)?[0m
+
+2 Scenarios (?[32m2 passed?[0m)
+11 Steps (?[32m11 passed?[0m)
+0m55,773s
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.5.1</a> at 6/07/2020 04:08:00 PM</p>
+</div>
+</div>
+</body>
+</html>

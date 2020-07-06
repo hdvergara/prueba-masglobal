@@ -75,7 +75,11 @@ public class StepTestGoogle {
     @Then("^I go to the 'Patrick Rothfuss - The Books' page$")
     public void iGoToThePatrickRothfussTheBooksPage() {
         mainController.checkPageBook();
-        //mainController.clickOnSpecificElementFromSuggestionList(2);
         Log.LOGGER.info("############################## Test Finished successfully ########################################");
+    }
+
+    @And("^the third result is (.*?)$")
+    public void theThirdResultIsTheNameOfTheWindByPatrickRothfussGoodreads(String resultExpected) {
+        mainController.checkSpecificSearchResult(resultExpected, 2);
     }
 }

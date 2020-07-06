@@ -1,6 +1,5 @@
 package co.com.pruebatecnica.controllers.google;
 
-import co.com.pruebatecnica.exceptions.WebActionsException;
 import co.com.pruebatecnica.helpers.Browser;
 import co.com.pruebatecnica.helpers.Properties;
 import co.com.pruebatecnica.logs.Log;
@@ -8,8 +7,6 @@ import co.com.pruebatecnica.pages.google.GoogleHome;
 import co.com.pruebatecnica.pages.google.GoogleResults;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
-
-import java.nio.file.Paths;
 
 import static co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.webAction;
 
@@ -114,6 +111,7 @@ public class MainController {
         String operation = " Check that page of book is displayed";
         String resultExpected = "The Name of the Wind";
         try {
+            Log.LOGGER.info("----------Operation: ".concat(operation).concat("----------"));
             String resultObtained = googleResults.getNameBook();
             Assert.assertEquals("the result was '".concat(resultObtained).concat("' but the expected is '")
                     .concat(resultExpected.concat("'.")), resultExpected, resultObtained);
@@ -159,9 +157,7 @@ public class MainController {
         String operation = "Click on the first search result";
         try {
             Log.LOGGER.info("----------Operation: ".concat(operation).concat("----------"));
-
             googleResults.clickFirstResult(position);
-
             Log.LOGGER.info("----------Operation successfully completed----------\n");
         } catch (Exception e) {
             Log.LOGGER.info("Operation failed: ".concat(e.getMessage()));

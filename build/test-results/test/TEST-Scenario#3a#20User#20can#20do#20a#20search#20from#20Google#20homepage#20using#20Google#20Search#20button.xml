@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: User can do a search from Google homepage using Google Search button" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-06T21:07:13" hostname="LAPTOP-AS5HFOC4" time="23.786">
+  <properties/>
+  <testcase name="Given I m on the homepage" classname="Scenario: User can do a search from Google homepage using Google Search button" time="0.0"/>
+  <testcase name="When I type 'The name of the wind' into the search field" classname="Scenario: User can do a search from Google homepage using Google Search button" time="0.0"/>
+  <testcase name="And I click the Google Search button" classname="Scenario: User can do a search from Google homepage using Google Search button" time="0.0"/>
+  <testcase name="Then I go to the search results page" classname="Scenario: User can do a search from Google homepage using Google Search button" time="0.0"/>
+  <testcase name="And the third result is 'The Name of the Wind by Patrick Rothfuss - Goodreads'" classname="Scenario: User can do a search from Google homepage using Google Search button" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: User can do a search from Google homepage using Google Search button" time="32.216"/>
+  <system-out><![CDATA[2020-jul-06 16:07:05 [Test] INFO  : ============================ Start Test ==============================
+2020-jul-06 16:07:13 [Test] INFO  : ----------Operation: Go to google home page----------
+2020-jul-06 16:07:13 [Test] INFO  : ----------Operation successfully completed----------
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 36510
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1594069629.812][WARNING]: Timed out connecting to Chrome, retrying...
+jul 06, 2020 4:07:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: OSS
+]]></system-err>
+</testsuite>
