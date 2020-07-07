@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">6</div>
+<div class="counter">12</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">2</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">32.216s</div>
+<div class="counter">29.677s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">83%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,16 +61,46 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
 </li>
 <li>
-<a href="#tab2">Standard error</a>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="And the first result is 'The Name of the Wind - Patrick Rothfuss'"></a>
+<h3 class="failures">And the first result is 'The Name of the Wind - Patrick Rothfuss'</h3>
+<span class="code">
+<pre>org.junit.ComparisonFailure: the result was 'The Name of the Wind by Patrick Rothfuss - Goodreads' but the expected is 'The Name of the Wind - Patrick Rothfuss'. expected:&lt;...he Name of the Wind [- Patrick Rothfus]s&gt; but was:&lt;...he Name of the Wind [by Patrick Rothfuss - Goodread]s&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at co.com.pruebatecnica.controllers.google.MainController.checkSpecificSearchResult(MainController.java:100)
+	at co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(StepTestGoogle.java:52)
+	at ✽.And the first result is 'The Name of the Wind - Patrick Rothfuss'(src/main/resources/features/GoogleSearch.feature:9)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="classMethod"></a>
+<h3 class="failures">classMethod</h3>
+<span class="code">
+<pre>org.junit.ComparisonFailure: the result was 'The Name of the Wind by Patrick Rothfuss - Goodreads' but the expected is 'The Name of the Wind - Patrick Rothfuss'. expected:&lt;...he Name of the Wind [- Patrick Rothfus]s&gt; but was:&lt;...he Name of the Wind [by Patrick Rothfuss - Goodread]s&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at co.com.pruebatecnica.controllers.google.MainController.checkSpecificSearchResult(MainController.java:100)
+	at co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(StepTestGoogle.java:52)
+	at ✽.And the first result is 'The Name of the Wind - Patrick Rothfuss'(src/main/resources/features/GoogleSearch.feature:9)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -86,7 +116,22 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">And I click the Google Search button</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">And the first result is 'The Name of the Wind - Patrick Rothfuss'</td>
+<td class="failures">0.002s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
 <td class="success">And the third result is 'The Name of the Wind by Patrick Rothfuss - Goodreads'</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Given I m on the homepage</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
@@ -101,38 +146,77 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">Then I go to the search results page</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">When I type 'The name of the wind' into the search field</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">When I type 'The name of the wind' into the search field</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">classMethod</td>
-<td class="success">32.216s</td>
+<td class="success">14.394s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">classMethod</td>
+<td class="failures">15.279s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2020-jul-06 16:07:05 [Test] INFO  : ============================ Start Test ==============================
-2020-jul-06 16:07:13 [Test] INFO  : ----------Operation: Go to google home page----------
-2020-jul-06 16:07:13 [Test] INFO  : ----------Operation successfully completed----------
+<pre>2020-jul-07 13:49:43 [Test] INFO  : ============================ Start Test ==============================
+2020-jul-07 13:49:51 [Test] INFO  : ----------Operation: Go to google home page----------
+2020-jul-07 13:49:51 [Test] INFO  : ----------Operation successfully completed----------
+
+2020-jul-07 13:50:11 [Test] INFO  : ============================ Start Test ==============================
+
+  Scenario: User can do a search from Google homepage using the suggestions ?[90m# src/main/resources/features/GoogleSearch.feature:12?[0m
+    ?[32mGiven ?[0m?[32mI m on the homepage?[0m                                               ?[90m# StepTestGoogle.ImOnTheHomepage()?[0m
+    ?[32mWhen ?[0m?[32mI type 'The name of the w' into the search field?[0m                   ?[90m# StepTestGoogle.iTypeTheNameOfTheWIntoTheSearchField()?[0m
+    ?[32mAnd ?[0m?[32mthe suggestions list is displayed?[0m                                   ?[90m# StepTestGoogle.theSuggestionsListIsDisplayed()?[0m
+    ?[32mAnd ?[0m?[32mI click on the first suggestion in the list?[0m                         ?[90m# StepTestGoogle.iClickOnTheFirstSuggestionInTheList()?[0m
+    ?[32mThen ?[0m?[32mI go to the search results page?[0m                                    ?[90m# StepTestGoogle.iGoToTheSearchResultsPage()?[0m
+    ?[31mAnd ?[0m?[31mthe first result is ?[0m?[31m?[1m'The Name of the Wind - Patrick Rothfuss'?[0m       ?[90m# StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(String)?[0m
+      ?[31morg.junit.ComparisonFailure: the result was 'The Name of the Wind by Patrick Rothfuss - Goodreads' but the expected is 'The Name of the Wind - Patrick Rothfuss'. expected:&lt;...he Name of the Wind [- Patrick Rothfus]s&gt; but was:&lt;...he Name of the Wind [by Patrick Rothfuss - Goodread]s&gt;
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at co.com.pruebatecnica.controllers.google.MainController.checkSpecificSearchResult(MainController.java:100)
+      	at co.com.pruebatecnica.stepsdefinitions.step_google.StepTestGoogle.theFirstResultIsTheNameOfTheWindPatrickRothfuss(StepTestGoogle.java:52)
+      	at ?.And the first result is 'The Name of the Wind - Patrick Rothfuss'(src/main/resources/features/GoogleSearch.feature:18)
+      ?[0m
+2020-jul-07 13:50:18 [Test] INFO  : ----------Operation: Go to google home page----------
+2020-jul-07 13:50:18 [Test] INFO  : ----------Operation successfully completed----------
 
 </pre>
 </span>
 </div>
-<div id="tab2" class="tab">
+<div id="tab3" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 36510
+Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 24350
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1594069629.812][WARNING]: Timed out connecting to Chrome, retrying...
-jul 06, 2020 4:07:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1594147787.581][WARNING]: Timed out connecting to Chrome, retrying...
+jul 07, 2020 1:49:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: OSS
+Starting ChromeDriver 72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38) on port 46856
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1594147815.061][WARNING]: Timed out connecting to Chrome, retrying...
+jul 07, 2020 1:50:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: OSS
 </pre>
 </span>
@@ -145,7 +229,7 @@ INFORMACIÓN: Detected dialect: OSS
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 5.5.1</a> at 6/07/2020 04:08:00 PM</p>
+<a href="http://www.gradle.org">Gradle 5.5.1</a> at 7/07/2020 01:50:40 PM</p>
 </div>
 </div>
 </body>

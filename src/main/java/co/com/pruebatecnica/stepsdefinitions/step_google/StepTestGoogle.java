@@ -81,5 +81,6 @@ public class StepTestGoogle {
     @And("^the third result is (.*?)$")
     public void theThirdResultIsTheNameOfTheWindByPatrickRothfussGoodreads(String resultExpected) {
         mainController.checkSpecificSearchResult(resultExpected, 2);
+        Log.LOGGER.info("############################## Test Finished successfully ########################################");
     }
 }
